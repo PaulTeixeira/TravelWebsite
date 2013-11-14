@@ -1,0 +1,156 @@
+body{
+margin: 0;
+background-color: #35AFB5;
+}
+/*
+Top bar, includes logo, tagline, and header
+*/
+#headbar {
+position:fixed;
+top:0;
+width:100%;
+height:12%;
+background:#41474F;
+z-index:2;
+}
+#logo{
+position:relative;
+height:100%;
+float:left;
+left: 15%;
+}
+#logo img{
+height:100%;
+width:120px;
+}
+#headbar h1 {
+text-align:center;
+color:#EEE;
+margin:0;
+font-family:"Comic Sans MS", cursive, sans-serif;
+}
+#tagline {
+position:absolute;
+right:30%;
+bottom:7%;
+color:#AAA;
+}
+/*
+main content of the page, whats "inside" the menu, footer, and header
+*/
+#content {
+position:relative;
+padding:1%;
+top:12%;
+left:15%;
+width:85%;
+}
+
+/*
+main menu, allows navigation of site, and will be consistant thoughout website
+*/
+#sidebar {
+position:fixed;
+top:12%;
+left:0;
+width:15%;
+height:100%;
+background:#4F5463;
+float:left;
+z-index:2;
+}
+#menu {
+	list-style-type:none;
+	background:#efefef;
+	padding:0 5%;
+	}
+#menu	li{
+	border-radius:10px;
+	transition: all .5s ease;
+	text-align:center;
+	width:95%;
+	height:10%;
+	background:#AAA;
+	clear:both;
+	float:left;
+	margin:2%;
+	}
+#menu li:hover{
+	background:#5A5A5C
+	}
+#menu a{
+	font-weight:bold;
+	font-size:16;
+	position:relative;
+	height:100%;
+	width:100%;
+	display:block;
+	text-decoration: none;
+	}
+#menu a:link,a:visited{
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#FFF;
+	}
+#menu	a:hover,a:active {
+	display:block;
+	color:#FFF;
+	}
+/*
+footer, has our company and copyright information, consistent throughout 
+*/
+#footbar {
+position:fixed;
+text-align:center;
+font-size:12;
+color:white;
+bottom:0;
+left:0;
+width:100%;
+height:5%;
+background:#41474F;
+clear:both;
+float:left;
+z-index:1;
+display:;
+}
+
+/*
+Order Page
+gallery
+*/
+#gallery{
+padding:1%;
+width:40%;
+height:150%;
+background:red;
+float:left;
+}
+#description{
+text-align:center;
+width:100%;
+margin:10px 0;
+height:40px;
+background:#AAA;
+float:left;
+}
+#mainimg{
+width:100%;
+height:300px;
+background:blue;
+float:left;
+}
+#orderform{
+margin:0 1%;
+width:50%;
+height:70%;
+background:blue;
+float:left;
+}
+.galleryitem{
+width:80px;
+height:80px;
+margin:5px;
+float:left;
+background-color:black;
+}
