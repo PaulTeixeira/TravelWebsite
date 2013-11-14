@@ -21,7 +21,7 @@ session_start();
 				<li><a href='signup.php'>LogIn</a></li>
 				<?php
 				//if user is logged in display additional menu options
-				if(isset($_SESSION['userid']))
+				if(isset($_SESSION['user']))
 				{
 				echo "<div style='float: left;font-size: 18;margin:5;'>Administratior Menu</div>";
 				echo "<li><a href='index.php'>Add Packages</a></li>";
