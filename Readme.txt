@@ -1,4 +1,8 @@
-This is more of a test of the git program
+Threaded Project
+Presentation 1
 
-
-hey
+Team members:
+	Jan Crisologo
+	Sharmaine Roxas
+	Paul Teixeira
+	Vishnu Reddy
