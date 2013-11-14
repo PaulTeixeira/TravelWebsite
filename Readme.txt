@@ -1,4 +1,4 @@
-Threaded Project
+DHTML Project
 Presentation 1
 
 Team members:
