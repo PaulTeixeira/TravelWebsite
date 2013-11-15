@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<title>Contact Page</title>
-</head>
-
-<body>
-
+<?php include "ui/header.php"?>
+		<div id='content'>
+		
 <table border=1>
 	<thead>
 		<tr>
@@ -21,9 +15,7 @@
 	<tbody>
 </div>
 <?php
-	$db = mysql_connect("localhost", "root", "");
-	mysql_select_db('travelexperts') or die(mysql_error());
-
+	include "settings/connection.php";
 	$results = mysql_query("SELECT * FROM agents");
 
 	while($row = mysql_fetch_assoc($results)) {
@@ -39,8 +31,5 @@
 ?>
 	</tbody>
 </table>
-
-
-</body>
-
-</html>
+		</div>
+<?php include "ui/footer.php"?>

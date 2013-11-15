@@ -1,4 +1,4 @@
-<?php include "header.php"?>
+<?php include "ui/header.php"?>
 		<div id='content'>
 					<div id='gallery'>
 							<div id='mainimg'></div>
@@ -24,4 +24,4 @@
 					<div id='orderform'>
 					</div>
 		</div>
-<?php include "footer.php"?>
+<?php include "ui/footer.php"?>

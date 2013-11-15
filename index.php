@@ -1,4 +1,4 @@
-<?php include "header.php"?>
+<?php include "ui/header.php"?>
 		<div id='content'>
 			<div>
 			<h3>Welcome to our site!</h3>
@@ -12,4 +12,4 @@
 			Ut semper hendrerit augue, quis mattis dolor sollicitudin at.
 			</div>
 		</div>
-<?php include "footer.php"?>
+<?php include "ui/footer.php"?>

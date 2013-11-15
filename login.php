@@ -1,18 +1,9 @@
-<html>
-
+	<?php include "ui/header.php"?>
 	<?php
 		
-		session_start();
-
-			$host="localhost"; // Host name 
-			$username="root"; // Mysql username 
-			$password=""; // Mysql password 
-			$db_name="travelexperts"; // Database name 
-			$tbl_name="users"; // Table name 
-
-		// Connect to server and select databse.
-			mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-			mysql_select_db("$db_name")or die("cannot select DB");
+			//session_start();
+			// Connect to server and select databse.
+			include "settings/connection.php";
 
 		// username and password sent from form 
 			if(isset($_GET['subBtn']))
@@ -43,7 +34,7 @@
 					
 					if ($dbPwd==$encPwd)
 					{		
-						$_SESSION["username"] = "user";
+						$_SESSION['username'] = "user";
 						header("location:index.php");
 					} else {
 						echo "Sorry, wrong password please TRY AGAIN...!!";
@@ -54,9 +45,8 @@
 		}
 		
 ?>
-
+		<div id='content'>
 	<!--master table starts-->
-	<body >
 		<form method="get" action="" > 
 		
 			<table border="0" align="center">
@@ -77,6 +67,5 @@
 				</tr>
 			</table>
 					<!--master table ends -->
-		</form>
-	</body>	
-</html>	
+		</div>
+<?php include "ui/footer.php"?>
