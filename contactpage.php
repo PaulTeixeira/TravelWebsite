@@ -16,7 +16,7 @@
 </div>
 <?php
 	include "settings/connection.php";
-	$results = mysql_query("SELECT * FROM agents");
+	$results = mysql_query("SELECT * FROM `Agents`");
 
 	while($row = mysql_fetch_assoc($results)) {
 		echo "<tr>";
