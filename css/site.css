@@ -1,6 +1,6 @@
 body{
 margin: 0;
-background-color: #35AFB5;
+background-color: #243240;
 }
 /*
 Top bar, includes logo, login info, and header
@@ -10,7 +10,7 @@ position:fixed;
 top:0;
 width:100%;
 height:12%;
-background:#41474F;
+background:#314659;
 z-index:2;
 }
 #logo{
@@ -20,8 +20,9 @@ float:left;
 left: 15%;
 }
 #logo img{
+padding:1% 1%;
 height:100%;
-width:120px;
+width:100%;
 }
 #headbar h1 {
 text-align:center;
@@ -30,9 +31,10 @@ margin:0;
 font-family:"Comic Sans MS", cursive, sans-serif;
 }
 #loginname {
-position:absolute;
-right:2%;
-top:5%;
+position:fixed;
+top:1%;
+right:5%;
+z-index:5;
 color:#AAA;
 }
 #logoutbutton{
@@ -61,63 +63,68 @@ color:#AAA;
 main content of the page, whats "inside" the menu, footer, and header
 */
 #content {
-position:relative;
-padding:1%;
-top:12%;
-left:15%;
-width:85%;
+width:70%;
+border-radius: 30px;
+margin:0 10%;
+padding:12% 5%;
+background:#667D91;
 }
 
 /*
 main menu, allows navigation of site, and will be consistant thoughout website
 */
-#sidebar {
+#adminmenu{
 position:fixed;
-top:12%;
-left:0;
-width:15%;
-height:100%;
-background:#4F5463;
-float:left;
-z-index:2;
+margin:0;
+top:auto;
+right:15%;
+bottom:0;
+z-index:4;
 }
-#menu {
-	list-style-type:none;
-	background:#efefef;
-	padding:0 5%;
-	}
-#menu	li{
-	border-radius:10px;
-	transition: all .5s ease;
-	text-align:center;
-	width:95%;
-	height:10%;
-	background:#AAA;
-	clear:both;
-	float:left;
-	margin:2%;
-	}
-#menu li:hover{
-	background:#5A5A5C;
-	}
-#menu a{
-	font-weight:bold;
-	font-size:16;
-	position:relative;
-	height:100%;
-	width:100%;
-	display:block;
-	text-decoration: none;
-	}
-#menu a:link,a:visited{
-	text-decoration:none;
-	text-transform:uppercase;
-	color:#FFF;
-	}
-#menu	a:hover,a:active {
-	display:block;
-	color:#FFF;
-	}
+#adminmenu li a{
+padding:3px;
+}
+.menu {
+position:fixed;
+right:0;
+top:0;
+text-align:left;
+display:inline;
+font-size:14px;
+font-weight:bold;
+}
+.menu ul {
+list-style: none;
+padding: 0;
+display:inline;
+}
+.menu li
+{
+float: left;
+list-style: none;
+display:inline;
+}
+.menu li a
+{
+border-radius: 10px;
+margin: 20px 5px 5px 5px;
+padding:10px;
+background-color:#778EA3;
+color: #F96533;
+display: inline;
+float: left;
+width: 100px;
+display:inline;
+text-decoration: none;
+text-align: center;
+transition:.5s;
+}
+.menu li a:hover
+{
+background-color:#9DAFBF;
+width: 125px;
+font-weight:bold;
+}
 /*
 footer, has our company and copyright information, consistent throughout 
 */
@@ -130,7 +137,7 @@ bottom:0;
 left:0;
 width:100%;
 height:5%;
-background:#41474F;
+background:#314659;
 clear:both;
 float:left;
 z-index:1;
