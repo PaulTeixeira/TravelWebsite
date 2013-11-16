@@ -1,3 +1,9 @@
+@font-face
+{
+font-family: janheaderfont;
+src: url('Sansation_Light.ttf');
+}
+
 body{
 margin: 0;
 background-color: #243240;

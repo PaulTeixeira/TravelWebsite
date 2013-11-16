@@ -11,7 +11,7 @@
 					<div id='carosel'>
 					<?php
 						include "settings/connection.php";
-						$results = mysql_query("SELECT * FROM `packages`");
+						$results = mysql_query("SELECT * FROM `Packages`");
 
 						while($row = mysql_fetch_assoc($results))
 						{
