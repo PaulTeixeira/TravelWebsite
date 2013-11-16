@@ -9,10 +9,12 @@ session_start();
 	<body>
 		<div id='headbar'>
 			<div id='logo'><img src='./media/websitelogo.png'></div>
-			<ul class="menu">
-            <li><a href='index.php'><span>Home</span></a></li>
-            <li><a href='order.php'><span>Order</span></a></li>
-            <li><a href='contactpage.php'><span>Contact</span></a></li>
-			<li><a href='login.php'><span>Log In</span></a></li>
-			</ul>
+			<div class="menu">
+				<ul>
+				<li><a href='index.php'><span>Home</span></a></li>
+				<li><a href='order.php'><span>Order</span></a></li>
+				<li><a href='contactpage.php'><span>Contact</span></a></li>
+				<li><a href='login.php'><span>Log In</span></a></li>
+				</ul>
+			</div>
 		</div>

@@ -9,7 +9,6 @@ font-family: jantextfont;
 src: url('../ui/fonts/Raleway Thin.ttf');
 }
 
-
 body{
 margin: 0;
 font-family:jantextfont;
@@ -25,22 +24,18 @@ Top bar, includes logo, login info, and header
 position:fixed;
 font-family: janheaderfont;
 top:0;
-width:100%;
-height:12%;
+width: 100%;
+height: 70px;
 background:#314659;
-z-index:2;
 }
 #logo{
-position:relative;
-height:100%;
-float:left;
-left: 15%;
+position: relative;
+height: 100%;
+float: left;
+left: 20px;
+margin:5px;
 }
-#logo img{
-padding:1% 1%;
-height:100%;
-width:100%;
-}
+
 #headbar h1 {
 text-align:center;
 color:#EEE;
@@ -77,14 +72,10 @@ z-index:4;
 #adminmenu li a{
 }
 .menu {
-position:fixed;
+position: relative;
+margin: 0 0 0 50px;
+float: left;
 white-space: nowrap;
-right:0;
-top:0;
-text-align:left;
-display:inline;
-font-size:14px;
-font-weight:bold;
 }
 .menu ul {
 list-style: none;
@@ -104,10 +95,8 @@ margin: 20px 5px 5px 5px;
 padding:10px;
 background-color:#778EA3;
 color: #F96533;
-display: inline;
 float: left;
 width: 100px;
-display:inline;
 text-decoration: none;
 text-align: center;
 transition:.5s;
@@ -116,7 +105,6 @@ transition:.5s;
 {
 background-color:#9DAFBF;
 margin-top:10px;
-font-weight:bold;
 }
 /*
 footer, has our company and copyright information, consistent throughout 
@@ -207,4 +195,31 @@ display:none;
 opacity: 1;
 border-style:solid;
 border-width:5px;
+}
+
+@media screen and (max-width: 1135){
+	#headbar{
+			height:110px;
+	}
+	.galleryitem{ 
+			margin:1px
+	}
+	#logo{
+			margin: 5px 0 0 50px;
+	}
+	.menu{
+			margin: 55px 0 0 100px;
+			position: absolute;
+	}
+	.menu li a{
+	border-radius: 0;
+	margin: 20px 0;
+	padding:5px;
+	background-color:#778EA3;
+	color: #F96533;
+	width: 100px;
+	text-decoration: none;
+	text-align: center;
+	transition:.5s;
+	}
 }
