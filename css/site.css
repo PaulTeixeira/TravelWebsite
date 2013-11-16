@@ -37,35 +37,13 @@ right:5%;
 z-index:5;
 color:#AAA;
 }
-#logoutbutton{
-	position:absolute;
-	right:2%;
-	top:50%;
-	padding:0 10px;
-	border-radius:10px;
-	transition: all .5s ease;
-	text-align:center;
-	background:#AAA;
-	}
-#logoutbutton:hover{
-	background:#5A5A5C;
-	}
-#logoutbutton a{
-	font-weight:bold;
-	font-size:16;
-	position:relative;
-	height:100%;
-	width:100%;
-	display:block;
-	text-decoration: none;
-	}
 /*
 main content of the page, whats "inside" the menu, footer, and header
 */
 #content {
-width:70%;
+width:80%;
 border-radius: 30px;
-margin:0 10%;
+margin:0 5%;
 padding:12% 5%;
 background:#667D91;
 }
@@ -141,7 +119,6 @@ background:#314659;
 clear:both;
 float:left;
 z-index:1;
-display:;
 }
 
 /*
@@ -149,30 +126,29 @@ Order Page
 gallery
 */
 #gallery{
-padding:1%;
-width:40%;
-height:150%;
-background:red;
+margin:0 1%;
+width:48%;
+height:100%;
 float:left;
 }
 #description{
 text-align:center;
+color:#F96533;
 width:100%;
 margin:10px 0;
-height:40px;
-background:#AAA;
+background:#667D91;
 float:left;
 }
 #mainimg{
 width:100%;
 height:300px;
-background:blue;
+background:black;
 float:left;
 }
 #orderform{
 margin:0 1%;
-width:50%;
-height:70%;
+width:48%;
+height:100%;
 background:blue;
 float:left;
 }
@@ -182,4 +158,11 @@ height:80px;
 margin:5px;
 float:left;
 background-color:black;
+}
+.galleryitem img{
+width:100%;
+height:100%;
+}
+.hidden{
+display:none;
 }

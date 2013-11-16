@@ -1,6 +1,5 @@
 <?php include "ui/header.php"?>
 		<div id='content'>
-			<div>
 			<h3>Welcome to our site!</h3>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
 			Nullam at nulla eros. Praesent tempus eu risus eget hendrerit. Nam facilisis nisi vel commodo <br/>
@@ -10,6 +9,5 @@
 			blandit consequat. Suspendisse hendrerit mollis orci eget consequat. In sed euismod ipsum. <br/>
 			Ut fermentum tincidunt erat. Ut in risus aliquam, condimentum ligula eget, molestie arcu. <br/>
 			Ut semper hendrerit augue, quis mattis dolor sollicitudin at.
-			</div>
 		</div>
 <?php include "ui/footer.php"?>
