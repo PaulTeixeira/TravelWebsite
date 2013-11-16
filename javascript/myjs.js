@@ -24,5 +24,6 @@ var mytimer;
 	
 	function fillorder()
 	{
+	clearTimeout(mytimer); //stop timer so no more switching
 	console.log('Filled form based on package: '+lastslideid);
 	}

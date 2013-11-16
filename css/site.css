@@ -1,18 +1,29 @@
 @font-face
 {
 font-family: janheaderfont;
-src: url('Sansation_Light.ttf');
+src: url('../ui/fonts/Chunk.ttf');
 }
+@font-face
+{
+font-family: jantextfont;
+src: url('../ui/fonts/Raleway Thin.ttf');
+}
+
 
 body{
 margin: 0;
+font-family:jantextfont;
 background-color: #243240;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: janheaderfont;
 }
 /*
 Top bar, includes logo, login info, and header
 */
 #headbar {
 position:fixed;
+font-family: janheaderfont;
 top:0;
 width:100%;
 height:12%;
@@ -34,7 +45,6 @@ width:100%;
 text-align:center;
 color:#EEE;
 margin:0;
-font-family:"Comic Sans MS", cursive, sans-serif;
 }
 #loginname {
 position:fixed;
@@ -59,17 +69,16 @@ main menu, allows navigation of site, and will be consistant thoughout website
 */
 #adminmenu{
 position:fixed;
-margin:0;
 top:auto;
 right:15%;
 bottom:0;
 z-index:4;
 }
 #adminmenu li a{
-padding:3px;
 }
 .menu {
 position:fixed;
+white-space: nowrap;
 right:0;
 top:0;
 text-align:left;
@@ -106,7 +115,7 @@ transition:.5s;
 .menu li a:hover
 {
 background-color:#9DAFBF;
-width: 125px;
+margin-top:10px;
 font-weight:bold;
 }
 /*
@@ -114,6 +123,7 @@ footer, has our company and copyright information, consistent throughout
 */
 #footbar {
 position:fixed;
+font-family: janheaderfont;
 text-align:center;
 font-size:12;
 color:white;

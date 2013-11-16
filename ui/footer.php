@@ -9,7 +9,7 @@ Copyright 2013 &copy
 				{
 				echo "<div id='loginname'>Logged in as: ".$_SESSION['username']." </div>";
 				echo "<ul id='adminmenu' class='menu'>";
-				echo "<li><a href=''><span>Add Packages</span></a></li>";
+				echo "<li><a href=''>Add Packages</a></li>";
 				echo "<li><a href='logout.php'><span>Log Out</span></a></li>";
 				echo "</ul>";
 				}
