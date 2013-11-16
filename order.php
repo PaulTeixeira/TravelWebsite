@@ -1,9 +1,13 @@
 <?php include "ui/header.php"?>
 <script src='javascript/myjs.js'></script>
 		<div id='content'>
-					<div id='gallery' onload='changeimg();'>
-					<div id='mainimg'></div>
-					<div id='description'>This is a description, it could go on for a while... <br/> maybe two lines?</div>
+					<div id='gallery'>
+						<div>
+							<img id='mainimg' src='' onclick='fillorder();'>
+							<div id='price'></div>
+						</div>
+						<div id='description'></div>
+						
 					<div id='carosel'>
 					<?php
 						include "settings/connection.php";
@@ -11,12 +15,13 @@
 
 						while($row = mysql_fetch_assoc($results))
 						{
-						echo "<div id=".$row['PackageId']." class='galleryitem' onmouseover='changeimg(this.id)' href='#'>";
-							echo "<div><img src='media/packagephotos/".$row['PackageId'].".jpg'></div>";
+						echo "<div id=".$row['PackageId']." class='galleryitem' onclick='changeimg(this.id)' href='#'>";
+							echo "<img src='media/packagephotos/".$row['PackageId'].".jpg'>";
 							echo "<div class='hidden'>".$row['PkgDesc']."</div>";
 							echo "<div class='hidden'>".$row['PkgBasePrice']."</div>";
 						echo "</div>";
 						}
+						echo "<script>changeimg();</script>";
 					?>
 					</div>
 					</div>
