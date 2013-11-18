@@ -26,14 +26,16 @@ font-family: janheaderfont;
 top:0;
 width: 100%;
 height: 70px;
-background:#314659;
+background: linear-gradient(to top,#314659, #233240);
 }
 #logo{
 position: relative;
 height: 100%;
 float: left;
-left: 20px;
 margin:5px;
+}
+#logo img{
+width:100%;
 }
 
 #headbar h1 {
@@ -56,7 +58,8 @@ width:80%;
 border-radius: 30px;
 margin:0 5%;
 padding:12% 5%;
-background:#667D91;
+background:radial-gradient(circle,#667D91,#778EA3);
+
 }
 
 /*
@@ -119,7 +122,7 @@ bottom:0;
 left:0;
 width:100%;
 height:5%;
-background:#314659;
+background: linear-gradient(to bottom,#314659, #233240);
 clear:both;
 float:left;
 z-index:1;
@@ -198,14 +201,20 @@ border-width:5px;
 }
 
 @media screen and (max-width: 1135){
+	#content {
+	padding:110px 5%;
+	}
 	#headbar{
 			height:110px;
+			width:100%;
 	}
 	.galleryitem{ 
 			margin:1px
 	}
 	#logo{
-			margin: 5px 0 0 50px;
+			margin: 1% 0 0 5%;
+			height:100%;
+			width:90%;
 	}
 	.menu{
 			margin: 55px 0 0 100px;
@@ -221,5 +230,9 @@ border-width:5px;
 	text-decoration: none;
 	text-align: center;
 	transition:.5s;
+	}
+	.menu li a:hover
+	{
+	margin-top:20px;
 	}
 }
