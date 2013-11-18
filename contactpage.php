@@ -26,7 +26,7 @@ Testing
 
 <?php
 	$db = mysql_connect("localhost", "root", "");
-	mysql_select_db('travelexperts') or die(mysql_error());
+	mysql_select_db('TravelExperts') or die(mysql_error());
 
 	$results = mysql_query("SELECT * FROM agents");
 
