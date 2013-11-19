@@ -132,32 +132,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		if($valid)
 		{
-			if(insertData($validate))
+			if($_FILES["file"] ["type"] == "image/jpeg" )
 			{
-				print "SUCCESS";
-			}
-			else
+			echo "file is valid";
+				if(insertData($validate))
+				{
+					print "SUCCESS";
+					move_uploaded_file($_FILES["file"]["tmp_name"], "media\\packagephotos\\".$GLOBALS['packageId'].".jpg");
+				}
+				else
+				{
+					print "FAIL";
+				}
+			}else
 			{
-				print "FAIL";
+			echo "Invalid File";
 			}
 		}
 	}	
-	
-	
-	if(isset($_POST["subBtn"]))
-	{
-	
-		if ( $_FILES["file"] ["type"] == "image/jpeg" )
-		{
-		echo "file is valid";
-		move_uploaded_file($_FILES["file"]["tmp_name"], "media\\packagephotos\\".$GLOBALS['packageId'].".jpg");
-		}
-		else
-		{
-		echo "Invalid File";
-		}
-	}
-
 	
 ?>	
 	<body>
