@@ -1,18 +1,18 @@
-<?php include "ui/header.php"?>
-		<div id='content'>
-		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
+<html>
+	<head>
+		<link rel="STYLESHEET" type="text/css" href="reg.css" />
 		<script type="text/javascript">
 		
 			function validateFormOnSubmit(theForm) {
 			var reason = "";
 
-			  reason = validateEmpty(theForm.custFirstName);
-			  reason = validateEmpty(theForm.custLastName);
-			  reason = validateEmpty(theForm.custAddress);
-			  reason = validateEmpty(theForm.custCity);
-			  reason = validateEmpty(theForm.custProv);
+			  reason += validateEmpty(theForm.custFirstName);
+			  reason += validateEmpty(theForm.custLastName);
+			  reason += validateEmpty(theForm.custAddress);
+			  reason += validateEmpty(theForm.custCity);
+			  reason += validateEmpty(theForm.custProv);
 			  reason += validatePostal(theForm.custPostal);
-			  reason = validateEmpty(theForm.custCountry);
+			  reason += validateEmpty(theForm.custCountry);
 			  reason += validatePhone(theForm.custHomePhone);
 			  reason += validatePhone(theForm.custBusPhone);
 			  reason += validateEmail(theForm.custEmail);
@@ -47,9 +47,9 @@
 				if (fld.value == "") {
 					fld.style.background = 'Yellow';
 					error = "You didn't enter your postal code.\n";
-				} else if (fld.value == myRegExp && fld.value.length == 6) {
+				} else if (fld.value != myRegExp && fld.value.length != 6) {
 					fld.style.background = 'Yellow';
-					error = "Invalid postal code character.\n";
+					error = "Invalid postal code .\n";
 				} else {
 					fld.style.background = 'White';
 				}
@@ -87,9 +87,11 @@
 				} else if (isNaN(parseInt(stripped))) {
 					error = "The phone number contains illegal characters.\n";
 					fld.style.background = 'Yellow';
-				} else if (!(stripped.length = 10)) {
-					error = "Wrong phone format (xxx) xxx-xxx.\n";
+				} else if (!(stripped.length == 10)) {
+					error = "The phone number is the wrong length. Make sure you included an area code.\n";
 					fld.style.background = 'Yellow';
+				} else {
+					fld.style.background = 'White';
 				}
 				return error;
 			}
@@ -97,7 +99,7 @@
 	</head>
 	
 	<body> 
-	<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="confirmReg.php" method = "post">
+	<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="confirm.php" method = "post">
 		<div id = "reg">
 			<fieldset >
 				<legend>Register</legend>
@@ -127,5 +129,5 @@
 			</fieldset>
 		</div>
 	</form> 
-</div>
-<?php include "ui/footer.php"?>
+	</body>
+</html>

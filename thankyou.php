@@ -1,5 +1,3 @@
-<?php include "ui/header.php"?>
-		<div id='content'>
 <script language="JavaScript" type="text/javascript">  
     var count = 5;  
     var redirect= "index.php";  
@@ -22,6 +20,4 @@
 	<script>  
 		 countDown();  
 	</script>  
-</span> 
-</div>
-<?php include "ui/footer.php"?>
+</span>  
