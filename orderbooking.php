@@ -25,7 +25,7 @@ function insertData($bookings_entry)
 		mysql_select_db('travelexperts') or die("Could not connect");
 		
 		$results = mysql_query($insertSQL);
-		print_r ($insertSQL);
+		
 				
 		if($results) 
 		{
@@ -134,7 +134,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		{
 			if(insertData($validate ))
 			{
-				print_r($validate);
 				print "SUCCESS";
 			}
 			else
