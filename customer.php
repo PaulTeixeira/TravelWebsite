@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="STYLESHEET" type="text/css" href="reg.css" />
+		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
 		<script type="text/javascript">
 		
 			function validateFormOnSubmit(theForm) {
@@ -99,12 +99,23 @@
 	</head>
 	
 	<body> 
-	<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="confirm.php" method = "post">
+	<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="confirmReg.php" method = "post">
 		<div id = "reg">
-			<fieldset >
+		
+			<fieldset>
 				<legend>Register</legend>
 				<div class='short_explanation'>* required fields</div>
 				
+				<label for='username' >User Name*:</label>
+				<input type='text' name='user' id='name' maxlength="50" />
+				<label for='password' >Password*:</label>
+				<input type='password' name='password' id='name' maxlength="50" />
+			</fieldset>
+		
+		<br />
+		
+			<fieldset >
+				<legend>Personal Information</legend>
 				<label for='custFirstName' >First Name*: </label>
 				<input type='text' name='custFirstName' id='name' maxlength="50" />
 				<label for='custLastName' >Last Name*: </label>
@@ -127,6 +138,7 @@
 				<input type='text' name='custEmail' id='custEmail' maxlength="50" />
 				<input type='submit' name='Submit' value='Submit' />		 
 			</fieldset>
+			
 		</div>
 	</form> 
 	</body>

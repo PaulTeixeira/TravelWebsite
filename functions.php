@@ -24,11 +24,11 @@
         
 		if($result) {
 			echo "SUCCESS";
-			header('Location: thankyou.php');
-			exit;
+			//header('Location: thankyou.php');
+			//exit;
 		} else {
 			echo "FAIL";
-			mysql_error();
+			echo mysql_error();
 		}
 	}
 ?>

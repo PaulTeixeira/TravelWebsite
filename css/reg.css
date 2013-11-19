@@ -17,6 +17,13 @@
    width: 230px;
    padding:20px;
    border:1px solid #ccc; 
+   box-shadow: 0 0 10px rgba(0,0,0,.3);
+   border: 2px groove threedface;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 15px;
+   border-bottom-left-radius: 5px;
+   background: #eee;
 }
 #reg input[type="text"],#reg textarea,
 #reg input[type="password"]
