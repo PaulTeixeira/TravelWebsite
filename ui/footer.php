@@ -1,6 +1,6 @@
 </body>
 <div id='footbar'>
-Powered by Apex Solutions <br/>
+<img src='./media/companylogo.png' height="60%" width="10%"><br/>
 Copyright 2013 &copy
 </div>
 			<?php

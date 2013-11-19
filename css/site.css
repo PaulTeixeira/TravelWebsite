@@ -9,14 +9,35 @@ font-family: jantextfont;
 src: url('../ui/fonts/Raleway Thin.ttf');
 }
 
+#box2 {
+position: fixed;
+width: 500;
+height: 500;
+top: 70px;
+left: 600px;
+}
+
+#container {
+	margin-left: auto;
+	width: 600px;
+	height: 600px;
+	margin-top: 150px;
+	padding: 20px;
+}
+
 body{
 margin: 0;
 font-family:jantextfont;
 background-color: #243240;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: janheaderfont;
+h1,h2,h4,h5,h6 {
+  font-family: janheaderfont; 
+  color: rgb(49,70,89);
 }
+h3 {
+  font-family: jantextfont;
+}
+
 /*
 Top bar, includes logo, login info, and header
 */
@@ -30,12 +51,15 @@ background: linear-gradient(to top,#314659, #233240);
 }
 #logo{
 position: relative;
-height: 100%;
 float: left;
+height: 60%;
 margin:5px;
+left: 50px;
+top: 20px; 
 }
 #logo img{
-width:100%;
+
+width: 60%;
 }
 
 #headbar h1 {
