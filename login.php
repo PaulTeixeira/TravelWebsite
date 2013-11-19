@@ -50,7 +50,7 @@
 			<table border="0" align="center">
 				<th align="center" colspan="2"> Login Here</th>
 				<tr align="center">
-					<td >User_Id</td>
+					<td >User Name</td>
 						<td><input type="text" id="form" name="User_Id" ></td>
 				</tr>
 				<tr align="center">
