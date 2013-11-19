@@ -17,7 +17,7 @@
 			as little delay as possible. So...what are you </br>
 			waiting for?</div>
 			<div id='box2'>
-				<img src="media/home_img.jpg" height="500px" width="500px">
+				<img src="media/home_img.jpg" height="600px" width="600px">
 			</div>	
 		</div>
 <?php include "ui/footer.php"?>
