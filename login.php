@@ -13,7 +13,7 @@
 			// To Query
 				$myusername = mysql_real_escape_string($myusername);
 				$mypassword = mysql_real_escape_string($mypassword);
-				$sql="SELECT password FROM users WHERE user='$myusername'";
+				$sql="SELECT * FROM `users` WHERE `user`='$myusername'";
 				$result=mysql_query($sql);
 				
 			// Mysql_num_row is counting table row
@@ -32,15 +32,15 @@
 					
 					if ($dbPwd==$encPwd)
 					{		
-						$_SESSION['username'] ="user";
-						//$_SESSION['agent'] = $row['agent'];
+						$_SESSION['username'] =$row['user'];
+						$_SESSION['agent'] = $row['agent'];
 						header("location:index.php");
 					} else {
-						echo "Sorry, wrong password please TRY AGAIN...!!";
+						echo "<script> alert('Wrong Password!!')</script>";
 					}
 				}	
 				else
-					echo "Sorry, wrong Username or password please TRY AGAIN!!";	
+					echo "<script> alert('User doesn't exist!!')</script>";
 		}
 ?>
 		<div id='content'>
@@ -54,7 +54,7 @@
 						<td><input type="text" id="form" name="User_Id" ></td>
 				</tr>
 				<tr align="center">
-					<td >password</td>
+					<td >Password</td>
 					<td><input type="password" id="form" name="password" </td>
 				</tr> 
 				<tr >
