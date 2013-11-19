@@ -1,10 +1,9 @@
-	<?php include "ui/header.php"?>
 	<?php
-		
+			include "ui/header.php";
 			//session_start();
 			// Connect to server and select databse.
 			include "settings/connection.php";
-
+		
 		// username and password sent from form 
 			if(isset($_GET['subBtn']))
 		{
@@ -26,15 +25,15 @@
 					
 					while($row = mysql_fetch_array($result))
 					{
-						$dbPwd = $row['password'];
-						
+						$dbPwd = $row['password'];						
 					}
 					
 					$encPwd = md5($mypassword);
 					
 					if ($dbPwd==$encPwd)
 					{		
-						$_SESSION['username'] = "user";
+						$_SESSION['username'] ="user";
+						//$_SESSION['agent'] = $row['agent'];
 						header("location:index.php");
 					} else {
 						echo "Sorry, wrong password please TRY AGAIN...!!";
@@ -43,7 +42,6 @@
 				else
 					echo "Sorry, wrong Username or password please TRY AGAIN!!";	
 		}
-		
 ?>
 		<div id='content'>
 	<!--master table starts-->
@@ -68,4 +66,4 @@
 			</table>
 					<!--master table ends -->
 		</div>
-<?php include "ui/footer.php"?>
+<?php include "ui/footer.php";?>
