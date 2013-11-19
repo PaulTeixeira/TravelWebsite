@@ -8,7 +8,7 @@ session_start();
 <head>
 	<body>
 		<div id='headbar'>
-			<div id='logo'><img src='./media/websitelogo.png'></div>
+			<div id='logo'><a href='index.php'><img src='./media/websitelogo.png'></a></div>
 			<div class="menu">
 				<ul>
 				<li><a href='index.php'><span>Home</span></a></li>

@@ -1,7 +1,6 @@
 <?php include "ui/header.php"?>
 		<div id='content'>
 			<div>
-			<br><br>
 			<h2>Welcome to Travel Experts!</h2>
 			We are your new number one hub connecting you with </br>
 			destinations around the world! Whether you are a </br>
