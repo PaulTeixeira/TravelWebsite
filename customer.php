@@ -5,9 +5,22 @@ include "ui/header.php";
 		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
 		<script type="text/javascript">
 		
+			function loopValidate(){
+				if(!document.getElementsByTagName) {
+					return false;
+				}
+				
+				elementsForms = document.getElementsByTagName("theForm");
+				
+				for(var i=0; i<elementsForms.length; i++) {
+					validateFormOnSubmit
+				}
+			}
+		
 			function validateFormOnSubmit(theForm) {
 			var reason = "";
-
+			  reason += validateEmpty(theForm.user);
+			  reason += validateEmpty(theForm.password);
 			  reason += validateEmpty(theForm.custFirstName);
 			  reason += validateEmpty(theForm.custLastName);
 			  reason += validateEmpty(theForm.custAddress);
@@ -33,7 +46,7 @@ include "ui/header.php";
 			 
 				if (fld.value.length == 0) {
 					fld.style.background = 'Yellow'; 
-					error = "The required field has not been filled in.\n"
+					error = "The required field has not been filled in.\n";
 				} else {
 					fld.style.background = 'White';
 				}

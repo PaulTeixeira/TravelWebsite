@@ -1,13 +1,24 @@
+@font-face
+{
+font-family: janheaderfont;
+src: url('../ui/fonts/Chunk.ttf');
+}
+@font-face
+{
+font-family: jantextfont;
+src: url('../ui/fonts/Raleway Thin.ttf');
+}
+
 #reg legend {
-    color: #333333;
-    font-family: Arial,sans-serif;
+    color: #F96533
+    font-family:jantextfont;
     font-size: 1.0em;
     font-weight: bold;
 }
 
 #reg label
 {
-   font-family : Arial, sans-serif;
+   font-family:jantextfont;
    font-size:0.8em;
    font-weight: bold;
 }
@@ -28,7 +39,7 @@
 #reg input[type="text"],#reg textarea,
 #reg input[type="password"]
 {
-  font-family : Arial, Verdana, sans-serif;
+  font-family:jantextfont;
   font-size: 0.8em;
   line-height:140%;
   color : #000; 
@@ -45,6 +56,6 @@
 }
 #reg .short_explanation {
     color: #333333;
-    font-family: Arial,sans-serif;
+    font-family:jantextfont;
     font-size: 0.6em;
 }
