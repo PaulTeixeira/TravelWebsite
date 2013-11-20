@@ -1,4 +1,5 @@
 <?php 
+	include "ui/header.php"
 	include('functions.php');
 	if(isset($_POST['Submit'])) 
 	{
@@ -6,9 +7,7 @@
 	setcookie("password",md5($_POST['password']), time()+3600);
 	}
 ?>
-
-<html>
-	<head>
+<!--
 		<style type = "">	
 			body {
 				background-color: #FFFFFF;
@@ -24,24 +23,21 @@
 				font-weight: bold;
 			}
 		</style>
-		
-		<title>Registration</title>
-	</head>
 	
 	<body>
 		<h1>REGISTRATION FORM</h1>
 		<p>Check the following information before submitting</p>
 		
-		
+-->		
 	<table cellspacing="0" cellpadding="0" border="0">
 			<tbody>
 				<tr>
 					<td width="100">User Name:</td>
-					<td width="300"><input type = "hidden" value = "<?php echo $_COOKIE["username"];?>" name = 'user'><?php echo $_COOKIE["username"];?></td>
+					<td width="300"><input type = "hidden" value = "<?php echo $_POST['user'];?>" name = 'user'><?php echo $_POST['user'];?></td>
 				</tr>
 				<tr>
 					<td width="100">Password:</td>
-					<td width="300"><input type = "hidden" value = "<?php echo $_COOKIE["password"];?>" name = 'password'><?php echo $_COOKIE["password"];?></td>
+					<td width="300"><input type = "hidden" value = "<?php echo $_POST['password'];?>" name = 'password'><?php echo $_POST['password'];?></td>
 				</tr>
 				
 		<form action = "" method = "post">			
@@ -101,8 +97,7 @@
 				</tr>
 		</table>
 		</form>
-	</body>
-	
+</div>
 <?php
 	if(isset($_POST['submit'])) {
 	include "settings/connection.php";
@@ -119,5 +114,5 @@
 		}
 	
 	}
+	include "ui/footer.php";
 ?>
-</html>
