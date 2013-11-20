@@ -9,9 +9,15 @@
  * FONT-FACE DEFINITIONS
  *********************************************/
 
-@font-face {
-	font-family: 'DSDNavFont';
-	src: url('DSDNavFontRegular.ttf');
+@font-face
+{
+font-family: janheaderfont;
+src: url('../ui/fonts/Chunk.ttf');
+}
+@font-face
+{
+font-family: jantextfont;
+src: url('../ui/fonts/Raleway Thin.ttf');
 }
 
 
@@ -25,12 +31,12 @@ html, body {
 	margin: 0;
 	overflow: hidden;
 	
-	font-family: 'Lato', Times, 'Times New Roman', serif;
+	font-family:janheaderfont;
 	font-size: 36px;
 	font-weight: 200;
 	letter-spacing: -0.02em;
 	
-	color: #eee;
+	color: orangered;
 	
 	width: 100%;
 	height: 100%;
@@ -39,13 +45,8 @@ html, body {
 }
 
 html {
-	background: #1c1e20;
-	background: -moz-radial-gradient(center, ellipse cover, #555a5f 0%, #1c1e20 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#555a5f), color-stop(100%,#1c1e20));
-	background: -webkit-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%);
-	background: -o-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%);
-	background: -ms-radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%);
-	background: radial-gradient(center, ellipse cover, #555a5f 0%,#1c1e20 100%);
+	background: #314659;
+	background: radial-gradient(center, ellipse cover, #555a5f 50%,#314659 100%);
 }
 
 /*********************************************
@@ -57,9 +58,9 @@ html {
 #reveal h4 {
 	margin: 0 0 20px 0;
 	
-	color: #eee;
-	
-	font-family: sans-serif;
+  font-family: janheaderfont; 
+  color: #131A21;
+  
 	line-height: 0.9em;
 	letter-spacing: 0.02em;
 	
