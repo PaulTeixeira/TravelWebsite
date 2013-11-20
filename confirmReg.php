@@ -106,7 +106,7 @@
 	$result = mysql_query($sql);
  
 		if($result) {
-			$result = mysql_insert_array("customers", $_POST, 'submit');
+			$result = mysql_insert_array("Customers", $_POST, 'submit');
 			if($result) echo "SUCCESS";
 			header('Location: thankyou.php');
 		} else {
