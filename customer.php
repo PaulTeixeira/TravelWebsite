@@ -1,5 +1,7 @@
-<html>
-	<head>
+<?php
+include "ui/header.php";
+?>
+<div id='content'>
 		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
 		<script type="text/javascript">
 		
@@ -141,5 +143,5 @@
 			
 		</div>
 	</form> 
-	</body>
-</html>
+</div>
+<?php include "ui/footer.php";?>

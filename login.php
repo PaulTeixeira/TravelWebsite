@@ -13,34 +13,26 @@
 			// To Query
 				$myusername = mysql_real_escape_string($myusername);
 				$mypassword = mysql_real_escape_string($mypassword);
+				$encPwd = md5($mypassword);
 				$sql="SELECT * FROM `users` WHERE `user`='$myusername'";
 				$result=mysql_query($sql);
-				
-			// Mysql_num_row is counting table row
-				$count=mysql_num_rows($result);
 			
 			// If result matched $myusername and $mypassword, table row must be 1 row
-				if($count == 1)
-				{
-					
-					while($row = mysql_fetch_array($result))
+					if($row = mysql_fetch_array($result))
 					{
-						$dbPwd = $row['password'];						
-					}
-					
-					$encPwd = md5($mypassword);
-					
-					if ($dbPwd==$encPwd)
-					{		
+						if ($row['password']==$encPwd)
+						{
+						$_SESSION['userid'] =$row['userId'];
 						$_SESSION['username'] =$row['user'];
 						$_SESSION['agent'] = $row['agent'];
 						header("location:index.php");
-					} else {
-						echo "<script> alert('Wrong Password!!')</script>";
+						}		
+					echo "<script> alert('Wrong Password!!')</script>";						
 					}
-				}	
-				else
+					else
+					{
 					echo "<script> alert('User doesn't exist!!')</script>";
+					}
 		}
 ?>
 		<div id='content'>

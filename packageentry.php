@@ -1,5 +1,6 @@
-<html>	
-	<?php
+<?php
+include "ui/header.php";
+
 $packageId;
 function insertData($package_entry) 
 {
@@ -137,22 +138,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			echo "file is valid";
 				if(insertData($validate))
 				{
-					print "SUCCESS";
+					echo "<script> alert('Package Added')</script>";
 					move_uploaded_file($_FILES["file"]["tmp_name"], "media\\packagephotos\\".$GLOBALS['packageId'].".jpg");
+					//unset($package_entry); would like to remove the post after so it clears the feilds here
 				}
 				else
 				{
-					print "FAIL";
+					echo "<script> alert('Please correct form data.')</script>";
 				}
 			}else
 			{
-			echo "Invalid File";
+				echo "<script> alert('Invalid photo type, please use only jpg photos')</script>";
 			}
 		}
 	}	
 	
-?>	
-	<body>
+?>
+<div id='content'>
 		<form method="post" action="" enctype="multipart/form-data"> 
 		<table border="0" align="center">
 			<tr>
@@ -196,5 +198,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			</tr>
 		</table>
 		<form > 
-	</body>
-</html>
+
+</div>
+<?php include "ui/footer.php";?>

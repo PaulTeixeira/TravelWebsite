@@ -14,6 +14,7 @@ var mytimer;
 		caroselitem = document.getElementById(index);
 		caroselitem.className='galleryitem highlight';
 		document.getElementById('mainimg').src = caroselitem.children[0].src;
+		document.getElementById('mainimg').onclick = function(){document.location.href="orderbooking.php?id="+index};
 		document.getElementById('description').innerHTML =  caroselitem.children[1].innerHTML;
 		document.getElementById('price').innerHTML = 'From as low as $'+caroselitem.children[2].innerHTML;
 		

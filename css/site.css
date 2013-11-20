@@ -103,8 +103,6 @@ right:2px;
 bottom:0;
 z-index:4;
 }
-#adminmenu li a{
-}
 .menu {
 position: relative;
 margin: 0 0 0 50px;
@@ -164,7 +162,6 @@ Order Page
 gallery
 */
 #gallery{
-margin:0 1%;
 float:left;
 }
 #description{
@@ -198,21 +195,14 @@ text-shadow: -1px -1px 0 #000,
  -1px 1px 0 #000,
  1px 1px 0 #000;
  }
-#orderform{
-margin:0 1%;
-width:48%;
-height:100%;
-background:blue;
-float:left;
-}
 .galleryitem{
 opacity: 0.5;
 border-radius: 10px;
 transition:all .75s ease;
 width:80px;
 height:80px;
-margin:5px;
 float:left;
+margin:20px;
 background-color:black;
 }
 .galleryitem img{
@@ -261,10 +251,11 @@ td {
 			width:90%;
 	}
 	.menu{
-			margin: 55px 0 0 100px;
+			margin: 55px 0 0 50px;
 			position: absolute;
 	}
 	.menu li a{
+	margin: 20px 1px 1px 1px;
 	border-radius: 0;
 	padding:5px;
 	background-color:#778EA3;

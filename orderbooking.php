@@ -1,5 +1,10 @@
-<html>	
-	<?php
+<?php
+include "ui/header.php";
+if(!isset($_SESSION["userid"]))
+{
+header("location:login.php");
+ }
+ if(!isset($_GET["id"]))  header("location:order.php");
 
 function insertData($bookings_entry) 
 {
@@ -21,8 +26,7 @@ function insertData($bookings_entry)
 		$insertSQL .= $columns . ") VALUES (" . $columnValues . ")";
 		
 	//------------------------
-		$db = mysql_connect("localhost", "root", "");
-		mysql_select_db('travelexperts') or die("Could not connect");
+		include "settings/connection.php";
 		
 		$results = mysql_query($insertSQL);
 		
@@ -43,9 +47,9 @@ $bookings_entry= array(
 					"BookingDate"=> isset($_POST["BookingDate"]) ? $_POST["BookingDate"] :	"",
 					"BookingNo"=>isset($_POST["BookingNo"]) ? $_POST["BookingNo"] :	"",
 					"TravelerCount"=>isset($_POST["TravelerCount"]) ? $_POST["TravelerCount"] :	"",
-					"CustomerId"=>isset($_POST["CustomerId"]) ? $_POST["CustomerId"] :	"",
+					"CustomerId"=>$_SESSION["userid"],
 					"TripTypeId"=>isset($_POST["TripTypeId"]) ? $_POST["TripTypeId"] :	"",
-					"PackageId"=>isset($_POST["PackageId"]) ? $_POST["PackageId"] :	"",
+					"PackageId"=>$_GET["id"],
 					);
 //declaration				
 	$BookingDateErr = $BookingNoErr = $TravelerCountErr = $CustomerIdErr = $TripTypeIdErr =  $PackageIdErr =	"";
@@ -142,11 +146,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			}
 		}
 	}
-	
-	
-	
-?>	
-	<body>
+?>
+<div id='content'>
 		<form method="POST" action="" > 
 		<table border="0" align="center">
 			<tr>
@@ -166,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			</tr>
 			<tr>
 				<td align="right">Customer ID</td>
-				<td><input type="text" name="CustomerId"	value="<?php echo $bookings_entry['CustomerId'];?>"> <span class="error">* <?php echo $CustomerIdErr;?></span>
+				<td><input readonly="readonly" type="text" name="CustomerId"	value="<?php echo $bookings_entry['CustomerId'];?>"> <span class="error">* <?php echo $CustomerIdErr;?></span>
 				</td>
 			</tr>
 			<tr>
@@ -176,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			</tr>
 			<tr>
 				<td align="right" >Package ID</td>
-				<td><input type="text" name="PackageId"	value="<?php echo $bookings_entry['PackageId'];?>"> <span class="error">* <?php echo $PackageIdErr;?></span>
+				<td><input readonly="readonly" type="text" name="PackageId"	value="<?php echo $bookings_entry['PackageId'];?>"> <span class="error">* <?php echo $PackageIdErr;?></span>
 				</td>
 			</tr>
 			<tr align="right" >
@@ -184,5 +185,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			</tr>
 		</table>
 		<form > 
-	</body>
-</html>
+</div>
+<?php include "ui/footer.php";?>

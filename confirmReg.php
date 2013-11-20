@@ -1,5 +1,10 @@
 <?php 
 	include('functions.php');
+	if(isset($_POST['Submit'])) 
+	{
+	setcookie("username",$_POST['user'], time()+3600);
+	setcookie("password",md5($_POST['password']), time()+3600);
+	}
 ?>
 
 <html>
@@ -27,21 +32,19 @@
 		<h1>REGISTRATION FORM</h1>
 		<p>Check the following information before submitting</p>
 		
-		<form name = "getForm" action = "" method = "get">
 		
-		<table cellspacing="0" cellpadding="0" border="0">
+	<table cellspacing="0" cellpadding="0" border="0">
 			<tbody>
 				<tr>
 					<td width="100">User Name:</td>
-					<td width="300"><input type = "hidden" value = "<?php echo isset($_POST['user']);?>" name = 'user'><?php echo isset($_POST['user']);?></td>
+					<td width="300"><input type = "hidden" value = "<?php echo $_COOKIE["username"];?>" name = 'user'><?php echo $_COOKIE["username"];?></td>
 				</tr>
 				<tr>
 					<td width="100">Password:</td>
-					<td width="300"><input type = "hidden" value = "<?php echo isset($_POST['password']);?>" name = 'password'><?php echo isset($_POST['password']);?></td>
+					<td width="300"><input type = "hidden" value = "<?php echo $_COOKIE["password"];?>" name = 'password'><?php echo $_COOKIE["password"];?></td>
 				</tr>
-		</form>	
-		
-		<form action = "" method = "post">		
+				
+		<form action = "" method = "post">			
 				<tr>
 					<td width="100">First Name:</td>
 					<td width="300"><input type = "hidden" value = "<?php echo $_POST['custFirstName'];?>" name = 'custFirstName'><?php echo $_POST['custFirstName'];?></td>
@@ -101,25 +104,20 @@
 	</body>
 	
 <?php
-	$db = mysql_connect('localhost', 'root', '');
-	mysql_select_db('travelexperts') or die ('Could not connect to database');
-	
-	if(isset($_GET)){
-		$sql = "INSERT INTO `users` (`user`, `password`) VALUES (".$_GET['user'].", ".$_GET['password'].")";
-		$result = mysql_query($sql);
-		
-	if($result) {
-			echo "SUCCESS";
-			//header('Location: thankyou.php');
-			//exit;
+	if(isset($_POST['submit'])) {
+	include "settings/connection.php";
+	$sql = "INSERT INTO `users` (`user`,`password`) VALUES ('".$_COOKIE["username"]."','".$_COOKIE["password"]."');";
+	$result = mysql_query($sql);
+ 
+		if($result) {
+			$result = mysql_insert_array("customers", $_POST, 'submit');
+			if($result) echo "SUCCESS";
+			header('Location: thankyou.php');
 		} else {
 			echo "FAIL";
 			echo mysql_error();
 		}
-	}
 	
-	if(isset($_POST['submit'])) {
-		$result = mysql_insert_array("customers", $_POST, 'submit');
 	}
 ?>
 </html>

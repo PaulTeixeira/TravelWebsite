@@ -1,8 +1,5 @@
 <?php
 
-	$db = mysql_connect('localhost', 'root', '');
-	mysql_select_db('travelexperts') or die ('Could not connect to database');
-	
 	function mysql_insert_array($table, $data, $exclude = array()) {
 
 		$fields = $values = array();

@@ -3,7 +3,7 @@
 		<div id='content'>
 					<div id='gallery'>
 						<div>
-							<img id='mainimg' src='' onclick='fillorder();'>
+							<img id='mainimg' src='' onclick=''>
 							<div id='price'></div>
 						</div>
 						<div id='description'></div>
