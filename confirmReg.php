@@ -1,5 +1,5 @@
 <?php 
-	include "ui/header.php"
+	include "ui/header.php";
 	include('functions.php');
 	if(isset($_POST['Submit'])) 
 	{
