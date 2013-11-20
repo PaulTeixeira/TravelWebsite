@@ -1,9 +1,7 @@
 <?php
 include "ui/header.php";
-if(!isset($_SESSION["userid"]))
-{
-header("location:login.php");
- }
+if (!isset($_SESSION['agent'])) header ('location:login.php');
+
  if(!isset($_GET["id"]))  header("location:order.php");
 
 function insertData($bookings_entry) 
@@ -180,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 				<td><input readonly="readonly" type="text" name="PackageId"	value="<?php echo $bookings_entry['PackageId'];?>"> <span class="error">* <?php echo $PackageIdErr;?></span>
 				</td>
 			</tr>
-			<tr align="right" >
+			<tr align="center" >
 				<td colspan="2"><input type="submit" value="submit" name="subBtn"></td>
 			</tr>
 		</table>

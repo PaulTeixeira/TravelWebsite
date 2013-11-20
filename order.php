@@ -2,7 +2,7 @@
 <script src='javascript/myjs.js'></script>
 		<div id='content'>
 					<div id='gallery'>
-						<div>
+						<div> Please click on photo to order package.
 							<img id='mainimg' src='' onclick=''>
 							<div id='price'></div>
 						</div>
