@@ -1,7 +1,7 @@
 <?php
 
 	function mysql_insert_array($table, $data, $exclude = array()) {
-
+		include "settings/connection.php";
 		$fields = $values = array();
 
 		if( !is_array($exclude) ) $exclude = array($exclude);

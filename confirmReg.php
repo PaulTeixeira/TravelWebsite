@@ -7,6 +7,7 @@
 	setcookie("password",md5($_POST['password']), time()+3600);
 	}
 ?>
+<div id='content'>
 <!--
 		<style type = "">	
 			body {
@@ -28,7 +29,7 @@
 		<h1>REGISTRATION FORM</h1>
 		<p>Check the following information before submitting</p>
 		
--->		
+-->	
 	<table cellspacing="0" cellpadding="0" border="0">
 			<tbody>
 				<tr>
