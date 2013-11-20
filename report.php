@@ -1,5 +1,6 @@
 <?php 
 	include "ui/header.php";
+?>
 <div id='content'>
 <table border=1 style="font-family: arial, helvetica;">
 	<thead>
