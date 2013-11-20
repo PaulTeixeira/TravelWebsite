@@ -1,5 +1,8 @@
 <?php 
 	include "ui/header.php";
+	if (!isset($_SESSION['agent'])) header ('location:login.php');
+	if ($_SESSION['agent']!=1) header('location:login.php');
+	
 ?>
 <div id='content'>
 <table border=1 style="font-family: arial, helvetica;">
