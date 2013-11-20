@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<title>Report Page</title>
-<link href="font.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<div id="table"> 
+<?php 
+	include "ui/header.php";
+<div id='content'>
 <table border=1 style="font-family: arial, helvetica;">
 	<thead>
 		<tr>
@@ -44,7 +36,4 @@
 	</tbody>
 </table>
 </div>
-
-</body>
-
-</html>
+<?php include "ui/footer.php";?>
