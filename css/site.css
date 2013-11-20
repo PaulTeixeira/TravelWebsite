@@ -126,18 +126,18 @@ float: left;
 list-style: none;
 display:inline;
 }
-.menu li a
+.menu li a 
 {
 border-radius: 10px;
 margin: 20px 5px 5px 5px;
-padding:10px;
-background-color:#778EA3;
-color: #F96533;
+padding: 10px;
+background-color: #F96533;
+color: #131A21;
 float: left;
 width: 100px;
 text-decoration: none;
 text-align: center;
-transition:.5s;
+transition: .5s;
 }
 .menu li a:hover
 {
