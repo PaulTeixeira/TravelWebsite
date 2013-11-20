@@ -1,0 +1,113 @@
+<!doctype html>  
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>RFP for Travel Experts</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="reveal-dsd.css">		
+	</head>
+	<body>
+		<div id="reveal" >
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+	
+<section>
+<h2>Using Reveal-dsd.js</h2>
+<p>
+Reveal-dsd.js is a modification by Dallin S. Durfee of Hakim El Hattab's reveal.js.  Thanks Hattab for an excellent piece of software!
+<p>
+These instructions are also an example presentation using Reveal-dsd.js.  It's not very long, because there is already 
+a nice example presentation at the <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> web page.
+<p>
+The first few slides will describe the changes I made to reveal.js.  The last slide gives basic instructions on how to use it.
+</section>
+
+<section>
+<h2>Changes</h2>
+The changes that I made to Hakim El Hattab's reveal.js script are listed on the next few slides.
+<p>
+<ul>
+<li>Moved some of the code from the html file you generate into the js script file, so that you have to put less clutter into your
+presentation file.</li>
+<li>Changed the key for the slide sorter to "s."  The slide sorter can sometimes be slow to come up, and it was really irritating
+for me to keep accidentally opening it because I'm used to hitting the space bar to advance a slide in a presentation.</li>
+</ul>
+</section>
+
+<section>
+<h2>Changes</h2>
+<ul>
+<li>Made the space bar and the "x" key move you forward/backward one slide or fragment - regardless of whether the next slide is
+down or to the right.  By hitting the space bar you will go through the whole presentation without accidentally skipping anything.</li>
+<li>Added a clickable area above the progress bar which allows you to quickly navigate to any point in your presentation</li>
+</ul>
+</section>
+
+<section>
+<h2>Changes</h2>
+<ul>
+<li>Made is so that when you press the "z" key, it puts the current slide location into the url.  This makes it much easier to 
+develop presentations - now when you reload the page it takes you to the slide you "marked" with the "z" key rather than the
+beginning of the presentation.</li>
+<li>Added quick navigation keys to help you thumb through the presentation faster - "f" and "b" move you a slide to the right or left
+without stepping through fragments, and "u" and "d" move you up or down a slide without stepping through fragments.</li>
+</ul>
+</section>
+
+<section>
+<h2>Changes</h2>
+<ul>
+<li>Added code so that the "enter" key reveals or hides all of the fragments on a slide.</li>
+<li>Added code so that "home" and "end" take you to the beginning and ending slides of the presentation.</li> 
+<li>Added a keyboard symbol to the navigation controls - clicking on it or pressing "h" will open a window with help on the controls.</li>
+<li>Made a font for the navigation controls and modified the standard .css file to work with the changes</li>
+</ul>
+</section>
+
+<section>
+<h2>Usage</h2>
+<p>
+Download <a href="reveal-dsd.zip">this zip file</a> with reveal-dsd.js, reset.css, reveal-dsd.css, DSDNavFontRegular.ttf, and the source for this presentation.  Then use the source for this presentation (RevealSimpleExample.html) as the basis for your new presentation.  See the <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> page for more instructions.  
+<p>
+That's all you need to know - but note that some of the code in the example at <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> isn't present in my example, because I moved it into the .js file.  Also, note that my modification of the .css file has some additional features described in the comments of the .js file. 
+</section>
+
+
+</div><!-- End of Slides div !-->		
+
+</div><!-- End of Reveal div !-->
+
+
+		<script src="reveal-dsd.js"></script>
+		<script>
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// Click above progress bar for quick navigation - only works if progress is true
+				progressNavigation: true,
+				
+				// If true; each slide will be pushed to the browser history
+				history: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+			</script>
+
+		<!-- Everything below this point is unrelated to the slideshow -->
+	</body>
+</html>

@@ -9,7 +9,6 @@
 			<th>End</th>
 			<th>Description</th>
 			<th>Base Price</th>
-			
 		</tr>
 	</thead>
 	<tbody>
