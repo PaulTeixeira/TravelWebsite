@@ -1,6 +1,10 @@
 <?php
 include "ui/header.php";
 
+		if(!isset($_SESSION["agent"]) and $_SESSION['agent']=='1') header("location:login.php");
+
+
+
 $packageId;
 function insertData($package_entry) 
 {
