@@ -9,12 +9,18 @@ font-family: jantextfont;
 src: url('../ui/fonts/Raleway Thin.ttf');
 }
 
-#box2 {
+#box {
 position: fixed;
 width: 500px;
 height: 500px;
 top: 70px;
 left: 600px;
+}
+
+#text {
+	width: 405px;
+	height: 480px;
+	text-align: justify;
 }
 
 body{
@@ -24,7 +30,7 @@ background-color: #243240;
 }
 h1,h2,h4,h5,h6 {
   font-family: janheaderfont; 
-  color: rgb(49,70,89);
+  color: #131A21;
 }
 h3 {
   font-family: jantextfont;
@@ -75,13 +81,13 @@ border-radius: 30px;
 margin:0 5%;
 padding:12% 5%;
 background:radial-gradient(circle,#667D91,#778EA3);
-
+text-align:justify;
 }
 
 .card {
 
 float: left;
-background: #6A6A6B;
+background: #131A21;
 margin: 1%;
 border-radius: 10px;
 padding: 10px;
