@@ -55,7 +55,7 @@
 						<input type="reset" value="Clear">
 					</td>
 				</tr>
-			</table>  S
+			</table> 
 			
 		</form>			
 		</div>
