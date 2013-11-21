@@ -5,18 +5,6 @@ include "ui/header.php";
 		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
 		<script type="text/javascript">
 		
-			function loopValidate(){
-				if(!document.getElementsByTagName) {
-					return false;
-				}
-				
-				elementsForms = document.getElementsByTagName("theForm");
-				
-				for(var i=0; i<elementsForms.length; i++) {
-					validateFormOnSubmit
-				}
-			}
-		
 			function validateFormOnSubmit(theForm) {
 			var reason = "";
 			  reason += validateEmpty(theForm.user);
@@ -52,10 +40,6 @@ include "ui/header.php";
 				}
 				return error;  
 			}
-			function trim(s)
-			{
-			  return s.replace(/^\s+|\s+$/, '');
-			}
 
 			function validatePostal(fld) {
 				myRegExp = new RegExp("^[a-z][0-9][a-z]( )?[0-9][a-z][0-9]$","i");
@@ -69,6 +53,10 @@ include "ui/header.php";
 					fld.style.background = 'White';
 				}
 				return error;
+			}
+			
+			function trim(s) {
+				return s.replace(/^\s+|\s+$/, '');
 			}
 			
 			function validateEmail(fld) {
