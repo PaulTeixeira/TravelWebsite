@@ -10,7 +10,6 @@ src: url('../ui/fonts/Raleway Thin.ttf');
 }
 
 #reg legend {
-    color: #F96533
     font-family:jantextfont;
     font-size: 1.0em;
     font-weight: bold;
@@ -19,7 +18,7 @@ src: url('../ui/fonts/Raleway Thin.ttf');
 #reg label
 {
    font-family:jantextfont;
-   font-size:0.8em;
+   font-size:0.9em;
    font-weight: bold;
 }
 

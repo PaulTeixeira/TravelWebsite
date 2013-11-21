@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+p.goals {
+	text-align: left;
+}
 
 
 /* HTML5BP:

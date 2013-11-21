@@ -5,7 +5,7 @@ include "ui/header.php";
 		<link rel="STYLESHEET" type="text/css" href="css/reg.css" />
 		<script type="text/javascript">
 		
-			function validateFormOnSubmit(theForm) {
+			function validateFormOnSubmit(theForm) {						//validates all the input fields
 			var reason = "";
 			  reason += validateEmpty(theForm.user);
 			  reason += validateEmpty(theForm.password);
@@ -29,7 +29,7 @@ include "ui/header.php";
 			  return false;
 			}
 			
-			function validateEmpty(fld) {
+			function validateEmpty(fld) {									//validate if the text fields were left empty
 				var error = "";
 			 
 				if (fld.value.length == 0) {
@@ -41,7 +41,7 @@ include "ui/header.php";
 				return error;  
 			}
 
-			function validatePostal(fld) {
+			function validatePostal(fld) {									//validate if postal code is null or has an illegal character and in wrong postal code format XXXXXX
 				myRegExp = new RegExp("^[a-z][0-9][a-z]( )?[0-9][a-z][0-9]$","i");
 				if (fld.value == "") {
 					fld.style.background = 'Yellow';
@@ -55,7 +55,7 @@ include "ui/header.php";
 				return error;
 			}
 			
-			function trim(s) {
+			function trim(s) {												//replaces illegal characters in the email address text field with a null value
 				return s.replace(/^\s+|\s+$/, '');
 			}
 			
@@ -80,7 +80,7 @@ include "ui/header.php";
 				return error;
 			}
 			
-			function validatePhone(fld) {
+			function validatePhone(fld) {								//test if phone number entered has illegal characters or length is in wrong formal XXX-XXX-XXX
 				var error = "";
 				var stripped = fld.value.replace(/[\(\)\.\-\ ]/g, '');    
 
@@ -104,6 +104,8 @@ include "ui/header.php";
 	<body> 
 	<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="confirmReg.php" method = "post">
 		<div id = "reg">
+		
+		<!---This fieldset will collect customer information which will be directed to the database upon submission-->
 		
 			<fieldset>
 				<legend>Register</legend>
