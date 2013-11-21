@@ -7,7 +7,7 @@ var mytimer;
 		var caroselitem;
 		
 		
-		if(lastslideid>=count)  index=1;
+		if(index>=count)  index=1;
 		if(index==null) 			 index=lastslideid+1;
 		
 		document.getElementById(lastslideid).className='galleryitem';
