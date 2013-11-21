@@ -1,11 +1,14 @@
 <?php
-include "ui/header.php";
-if (!isset($_SESSION['agent'])) header ('location:login.php');
+	
+	include "ui/header.php";
+	
+	if (!isset($_SESSION['agent'])) header ('location:login.php');
+	if(!isset($_GET["id"]))  header("location:order.php");
 
- if(!isset($_GET["id"]))  header("location:order.php");
-
-function insertData($bookings_entry) 
-{
+ 
+	// function to Connect to server,select database and insert into database.
+	function insertData($bookings_entry) 
+	{
 	$cols = array_keys($bookings_entry);
 	$columns ="";
 	$columnValues ="";
@@ -147,6 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 <div id='content'>
 		<form method="POST" action="" > 
+		<!--table starts-->
 		<table border="0" align="center">
 			<tr>
 				<th align="center" colspan="2"> Bookings</th>
@@ -181,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			<tr align="center" >
 				<td colspan="2"><input type="submit" value="submit" name="subBtn"></td>
 			</tr>
-		</table>
-		<form > 
+		</table>	<!--table ends -->
+		</form > 
 </div>
 <?php include "ui/footer.php";?>

@@ -36,14 +36,14 @@
 		}
 ?>
 		<div id='content'>
-	<!--master table starts-->
+	<!--table starts-->
 		<form method="get" action="" > 
 		
 			<table border="0" align="center">
 				<th align="center" colspan="2"> Login Here</th>
 				<tr align="center">
 					<td >User Name</td>
-						<td><input type="text" id="form" name="User_Id" ></td>
+					<td><input type="text" id="form" name="User_Id" ></td>
 				</tr>
 				<tr align="center">
 					<td >Password</td>
@@ -55,7 +55,8 @@
 						<input type="reset" value="Clear">
 					</td>
 				</tr>
-			</table>
-					<!--master table ends -->
+			</table>  S
+			
+		</form>			
 		</div>
 <?php include "ui/footer.php";?>

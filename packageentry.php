@@ -1,11 +1,14 @@
 <?php
-include "ui/header.php";
+	include "ui/header.php";
 
-if(!isset($_SESSION["agent"])) header("location:login.php");
-if($_SESSION["agent"]!=1) header("location:login.php");
-		
-$packageId;
-function insertData($package_entry) 
+	if(!isset($_SESSION["agent"])) header("location:login.php");
+	if($_SESSION["agent"]!=1) header("location:login.php");
+			
+	$packageId;
+	
+	
+	// function to Connect to server,select database and insert into database.
+	function insertData($package_entry) 
 {
 	$cols = array_keys($package_entry);
 	$columns ="";
@@ -159,7 +162,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 <div id='content'>
 		<form method="post" action="" enctype="multipart/form-data"> 
-		<table border="0" align="center">
+		<!--table starts-->
+		<table border="0" align="center"> 
 			<tr>
 				<th align="center" colspan="2"> Package Entry</th>
 			</tr>
@@ -199,8 +203,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			<tr align="center" >
 				<td colspan="2"><input type="submit" value="submit" name="subBtn"></td>
 			</tr>
-		</table>
-		<form > 
+		</table> <!--table ends -->
+		</form > 
 
 </div>
 <?php include "ui/footer.php";?>

@@ -5,6 +5,7 @@
 	
 ?>
 <div id='content'>
+<!--table starts -->
 <table border=1 style="font-family: arial, helvetica;">
 	<thead>
 		<tr>
@@ -17,6 +18,7 @@
 	<tbody>
 	
 <?php
+	//connects to the database
 	$db = mysql_connect("localhost", "root", "");
 	mysql_select_db('travelexperts') or die(mysql_error());
 	//echo 'Testing';
@@ -35,8 +37,7 @@
 		echo "</tr>";
 	}
 ?>
-
 	</tbody>
-</table>
+</table> <!--table ends -->
 </div>
 <?php include "ui/footer.php";?>
