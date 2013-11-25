@@ -1,12 +1,15 @@
+<!--By Sharmaine Roxas and Paul T.-->
+
 <?php 
 	include "ui/header.php";
 	include('functions.php');
-	if(isset($_POST['Submit'])) 
+	if(isset($_POST['Submit'])) 									//this part is done by Paul
 	{
 	setcookie("username",$_POST['user'], time()+3600);
 	setcookie("password",md5($_POST['password']), time()+3600);
 	}
 ?>
+
 <div id='content'>
 <!--
 		<style type = "">	
@@ -24,12 +27,13 @@
 				font-weight: bold;
 			}
 		</style>
-	
+-->		
 	<body>
 		<h1>REGISTRATION FORM</h1>
 		<p>Check the following information before submitting</p>
 		
--->	
+		<!---Registration form for users. It will collect all the data inputed by the user and sends it to the database upon submission. -->
+
 	<table cellspacing="0" cellpadding="0" border="0">
 			<tbody>
 				<tr>
@@ -102,13 +106,13 @@
 <?php
 	if(isset($_POST['submit'])) {
 	include "settings/connection.php";
-	$sql = "INSERT INTO `users` (`user`,`password`) VALUES ('".$_COOKIE["username"]."','".$_COOKIE["password"]."');";
+	$sql = "INSERT INTO `users` (`user`,`password`) VALUES ('".$_COOKIE["username"]."','".$_COOKIE["password"]."');";		//done by Paul T.
 	$result = mysql_query($sql);
  
 		if($result) {
-			$result = mysql_insert_array("Customers", $_POST, 'submit');
+			$result = mysql_insert_array("Customers", $_POST, 'submit');			//call the function in the functions.php to insert $_POST data to Customers table.
 			if($result) echo "SUCCESS";
-			header('Location: thankyou.php');
+			header('Location: thankyou.php');										//if registration is successful it will redirect the customer to a thank you page.
 		} else {
 			echo "FAIL";
 			echo mysql_error();

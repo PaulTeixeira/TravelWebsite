@@ -1,3 +1,5 @@
+<!--By: Sharmaine Roxas -->
+
 <?php
 include "ui/header.php";
 ?>
@@ -6,10 +8,10 @@ include "ui/header.php";
 <script language="JavaScript" type="text/javascript">  
     var count = 5;  
     var redirect= "index.php";  
-      
-    function countDown(){  
+	
+    function countDown(){  				//a function which will create a timer then redirect to the index page after registering
 		if (count <=0){  
-			window.location = redirect;  
+			window.location = redirect; 
 		}else {  
 			count--;  
 			document.getElementById("timer").innerHTML = "This page will redirect in "+count+" seconds."  
@@ -23,7 +25,7 @@ include "ui/header.php";
 <span id="timer">  
 
 	<script>  
-		 countDown();  
+		 countDown();  //will call the countDown() function
 	</script>  
 </span> 
 

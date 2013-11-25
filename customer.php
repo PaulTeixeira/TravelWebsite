@@ -1,3 +1,6 @@
+<!--By: Sharmaine Roxas-->
+
+
 <?php
 include "ui/header.php";
 ?>
@@ -29,7 +32,7 @@ include "ui/header.php";
 			  return false;
 			}
 			
-			function validateEmpty(fld) {									//validate if the text fields were left empty
+			function validateEmpty(fld) {									//check if the text fields were left empty
 				var error = "";
 			 
 				if (fld.value.length == 0) {
@@ -38,11 +41,11 @@ include "ui/header.php";
 				} else {
 					fld.style.background = 'White';
 				}
-				return error;  
+				return error;  						//return the error message if it is null
 			}
 
 			function validatePostal(fld) {									//validate if postal code is null or has an illegal character and in wrong postal code format XXXXXX
-				myRegExp = new RegExp("^[a-z][0-9][a-z]( )?[0-9][a-z][0-9]$","i");
+				myRegExp = new RegExp("^[a-z][0-9][a-z]( )?[0-9][a-z][0-9]$","i");			//regular expression
 				if (fld.value == "") {
 					fld.style.background = 'Yellow';
 					error = "You didn't enter your postal code.\n";
