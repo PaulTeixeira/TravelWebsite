@@ -1,4 +1,7 @@
 <?php
+
+	// done by vishnukumar Guntuka and monitored by Paul
+
 	include "ui/header.php";
 
 	if(!isset($_SESSION["agent"])) header("location:login.php");
@@ -146,7 +149,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 				{
 					echo "<script> alert('Package Added')</script>";
 					move_uploaded_file($_FILES["file"]["tmp_name"], "media/packagephotos/".$GLOBALS['packageId'].".jpg");
-					//unset($package_entry); would like to remove the post after so it clears the feilds here
 				}
 				else
 				{

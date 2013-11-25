@@ -1,5 +1,8 @@
 	<?php
-			include "ui/header.php";
+		
+		// done by VishnuKumar Guntuka
+		
+		include "ui/header.php";
 			//session_start();
 			// Connect to server and select databse.
 			include "settings/connection.php";
