@@ -1,4 +1,4 @@
-<?php include "ui/header.php"?>
+<?php include "ui/header.php" //Jan Crisologo?>
 		<div id='content'>
 			<div id='text'>
 			<h2>Welcome to Travel Experts!</h2>

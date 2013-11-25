@@ -2,7 +2,7 @@
 	include "ui/header.php";
 	if (!isset($_SESSION['agent'])) header ('location:login.php');
 	if ($_SESSION['agent']!=1) header('location:login.php');
-	
+
 ?>
 <div id='content'>
 <!--table starts -->
@@ -17,7 +17,7 @@
 	</thead>
 	<tbody>
 	
-<?php
+<?php//Jan Crisologo
 	//connects to the database
 	$db = mysql_connect("localhost", "root", "");
 	mysql_select_db('travelexperts') or die(mysql_error());
