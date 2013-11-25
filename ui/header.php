@@ -1,4 +1,5 @@
 <?php
+/* Paul Teixeira */
 session_start();
 ?>
 <html>

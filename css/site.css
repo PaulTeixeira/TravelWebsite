@@ -1,3 +1,4 @@
+/* Paul Teixeira */
 @font-face
 {
 font-family: janheaderfont;
@@ -47,6 +48,7 @@ width: 100%;
 height: 70px;
 background: linear-gradient(to top,#314659, #233240);
 }
+
 #logo{
 position: relative;
 float: left;
@@ -83,7 +85,7 @@ padding:12% 5%;
 background:radial-gradient(circle,#667D91,#778EA3);
 text-align:justify;
 }
-
+/* css for contact cards*/
 .card {
 
 float: left;
@@ -139,6 +141,7 @@ text-decoration: none;
 text-align: center;
 transition: .5s;
 }
+/* Allows hover effect */
 .menu li a:hover
 {
 background-color:#9DAFBF;
@@ -162,8 +165,7 @@ clear:both;
 float:left;
 z-index:1;
 }
-
-/*
+/* Paul Teixeira
 Order Page
 gallery
 */
@@ -225,6 +227,7 @@ border-style:solid;
 border-width:5px;
 border-color:#314659;
 }
+/* Paul Teixeira All tables */
 table{
 margin-top:10px;
 border-radius: 10px;
@@ -240,7 +243,7 @@ color:#F96533;
 td {
 
 }
-@media screen and (max-width: 1135){
+@media screen and (max-width: 1135){ /* Paul Teixeira -- Media query to create responsive mobile ready version - (Only alpha stage) */
 	#content {
 	padding:120px 5%;
 	}

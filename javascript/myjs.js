@@ -1,3 +1,5 @@
+/* Paul Teixeira */
+
 var lastslideid=1; //stores last slide so I know what slide to go to next when timesout
 var mytimer;
 
@@ -21,10 +23,4 @@ var mytimer;
 		clearTimeout(mytimer);
 		mytimer = setTimeout('changeimg()',7000);
 		lastslideid=parseInt(index);
-	}
-	
-	function fillorder()
-	{
-	clearTimeout(mytimer); //stop timer so no more switching
-	console.log('Filled form based on package: '+lastslideid);
 	}

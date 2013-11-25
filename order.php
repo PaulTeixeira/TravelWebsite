@@ -1,4 +1,6 @@
-<?php include "ui/header.php"?>
+<?php include "ui/header.php"
+/* Paul Teixeira */
+?>
 <script src='javascript/myjs.js'></script>
 		<div id='content'>
 					<div id='gallery'>
@@ -10,10 +12,10 @@
 						
 					<div id='carosel'>
 					<?php
-						include "settings/connection.php";
-						$results = mysql_query("SELECT * FROM `Packages`");
+						include "settings/connection.php"; //do connection
+						$results = mysql_query("SELECT * FROM `Packages`"); //do query
 
-						while($row = mysql_fetch_assoc($results))
+						while($row = mysql_fetch_assoc($results)) //create gallery
 						{
 						echo "<div id=".$row['PackageId']." class='galleryitem' onclick='changeimg(this.id)' href='#'>";
 							echo "<img src='media/packagephotos/".$row['PackageId'].".jpg'>";
@@ -21,7 +23,7 @@
 							echo "<div class='hidden'>".$row['PkgBasePrice']."</div>";
 						echo "</div>";
 						}
-						echo "<script>changeimg();</script>";
+						echo "<script>changeimg();</script>"; //start first changeimg()
 					?>
 					</div>
 					</div>			

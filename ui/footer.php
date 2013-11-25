@@ -1,3 +1,4 @@
+<!--/* Paul Teixeira */-->
 </body>
 <div id='footbar'>
 <img src='./media/companylogo.png' height="60%" width="10%"><br/>
